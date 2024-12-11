@@ -1,0 +1,44 @@
+{
+	"name": "filefordirjson",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"foldername": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().foldername",
+					"type": "Expression"
+				},
+				"fileSystem": "project"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"CustomerID": {
+					"type": "integer"
+				},
+				"Name": {
+					"type": "string"
+				},
+				"Region": {
+					"type": "string"
+				},
+				"Email": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

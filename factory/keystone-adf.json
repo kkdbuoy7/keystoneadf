@@ -1,0 +1,9 @@
+{
+	"name": "keystone-adf",
+	"location": "eastus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "482cbd96-2f4b-47ae-a99a-afdc160a7180",
+		"tenantId": "c2e7466c-f57c-4d25-947c-2c2c7a6eb4e5"
+	}
+}

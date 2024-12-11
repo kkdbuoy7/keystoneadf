@@ -1,0 +1,34 @@
+{
+	"name": "dsparam",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sqldbparam",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"dbname": {
+					"value": "@dataset().dsdbname",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"dsdbname": {
+				"type": "string"
+			},
+			"dstablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": {
+				"value": "@dataset().dstablename",
+				"type": "Expression"
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
