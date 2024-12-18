@@ -1,0 +1,12 @@
+{
+	"name": "keystone-adf",
+	"properties": {
+		"globalParameters": {
+			"param1": {
+				"type": "string",
+				"value": "value1"
+			}
+		}
+	},
+	"location": "eastus2"
+}
